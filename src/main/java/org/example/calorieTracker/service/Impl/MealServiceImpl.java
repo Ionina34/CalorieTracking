@@ -25,6 +25,8 @@ public class MealServiceImpl implements MealService {
 
     @Override
     public Meal addMeal(Meal meal) {
+        User user = userService.findById(meal.getUser().getId());
+        meal.setUser(user);
         for (Dish dish : meal.getDishes()) {
             dishService.addDish(dish);
         }

@@ -33,7 +33,6 @@ public class MealController {
     @PostMapping("/user/{id}")
     public ResponseEntity<MealResponse> createMeal(@PathVariable Long id,
                                                    @RequestBody @Valid CreateMealRequest request) {
-        System.out.println("Ssss");
         Meal meal = mealService.addMeal(
                 mealMapper.toEntity(id, request)
         );

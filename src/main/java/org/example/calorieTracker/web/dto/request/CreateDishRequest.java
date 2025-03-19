@@ -13,7 +13,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CreateDishRequest {
-    @NotNull(message = "The field must be filled in")
+    @NotBlank(message = "The field must be filled in")
     private String name;
 
     @Min(value = 1,

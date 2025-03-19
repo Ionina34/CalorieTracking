@@ -12,7 +12,6 @@ import java.time.LocalDate;
 @RequestMapping("/api/v1/reports")
 public class ReportController {
 
-    //todo
     @GetMapping("/daily/{userId}/{date}")
     public ResponseEntity<String> getDailyReport(@PathVariable Long userId,
                                                  @PathVariable LocalDate date){
@@ -25,7 +24,7 @@ public class ReportController {
         return ResponseEntity.ok("Проверка...");
     }
 
-    @GetMapping("/nutrition-history/{userId}/")
+    @GetMapping("/nutrition-history/{userId}")
     public ResponseEntity<String> getHistory(@PathVariable Long userId){
         return ResponseEntity.ok("История питания");
     }
